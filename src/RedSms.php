@@ -38,6 +38,6 @@ class RedSms
             config('redsms.from')
         );
         
-        return $sms->success;
+        return $sms['success'];
     }
 }
