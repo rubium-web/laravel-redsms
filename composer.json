@@ -1,0 +1,44 @@
+{
+    "name": "rubium/redsms",
+    "description": "Package for send sms via redsms.ru. Based on official PHP class https://github.com/redsms/api-samples-php",
+    "type": "package",
+    "license": "MIT",
+    "keywords": [
+        "laravel"
+    ],
+    "authors": [
+        {
+            "name": "Rubium Web",
+            "email": "hello@rubium.ru"
+        }
+    ],
+    "require": {
+        "illuminate/support": "^6.0|^7.0|^8.0|^9.0",
+        "ext-curl": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Rubium\\RedSms\\": "./src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Rubium\\RedSms\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Rubium\\RedSms\\RedSmsServiceProvider"
+            ],
+            "aliases": {
+                "RedSms": "Rubium\\RedSms\\Facades\\RedSms"
+            }
+        }
+    },
+    "require-dev": {
+    }
+}
